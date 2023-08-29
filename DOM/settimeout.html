@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Difference between DOM and JS Code</title>
+    </head>
+    <body>
+        <h1>Diffeence between DOM and JS code</h1>
+        <p>Click below button to open new window</p>
+        <button onclick="newWindow()">Click Here</button>
+        <script>
+            function newWindow(){
+                console.log('inside newWindow');
+                let url = 'https://youtube.com';
+                let windowOpen = window.open(url,'','');
+
+                setTimeout(() => {
+                    console.log('inside windowOpen');
+                    windowOpen.close();
+                }, 5000);
+            }
+        </script>
+    </body>
+</html>

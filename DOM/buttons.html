@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>    
+    <title>Buttons</title>
+    <style>
+        body{
+            text-align: center;
+        }
+        button{
+            width: 400px;
+            background-color: black;
+            color: white;
+            padding: 1em;
+            margin: 0.5em 32em;
+            cursor: pointer;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h1>Accessing Buttons</h1>
+    <button class="green undo" onClick="green()">Click to Change the button Color to Green</button>
+    <button class="red undo" onClick="red()">Click to Change the button Color to Red</button>
+    <button class="blue undo" onClick="blue()">Click to Change the button Color to Blue</button>
+    <button onClick="undo()">Click to Reset all button Colors</button>
+    <script>
+        function green(){
+            document.getElementsByClassName('green')[0].style.backgroundColor = 'green';
+        }
+
+        function red(){
+            document.getElementsByClassName('red')[0].style.backgroundColor = 'red';
+        }
+
+        function blue(){
+            document.getElementsByClassName('blue')[0].style.backgroundColor = 'blue';
+        }
+
+        function undo(){
+            let buttonElements = document.getElementsByClassName('undo');
+            for(let i=0 ; i < buttonElements.length ; i++){
+                buttonElements[i].style.backgroundColor = 'black';
+            }
+        }
+    </script>
+</body>
+</html>

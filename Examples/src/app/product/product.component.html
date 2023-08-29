@@ -1,0 +1,20 @@
+<h2>Product Details</h2>
+<div>
+    <dl>
+        <dt>Name</dt>
+        <dd>{{product.Name}}</dd>
+        <dt>Price</dt>
+        <dd>{{product.Price}}</dd>
+        <dt>Quantity</dt>
+        <dd>{{product.Qty}}</dd>
+        <dt>Total Amount</dt>
+        <dd>{{product.Price * product.Qty}}</dd>
+        <dt>Stock</dt>
+        <dd>{{(product.isAvailable == true) ? "Is Available" : "Out of Stock"}}</dd>
+        <dt>Image</dt>
+        <dd>
+            <!-- <img src='{{product.Image}}' height="70" width="70" alt='OnePlus Image'> -->
+            <img [src]='product.Image' height="70" width="70" alt='OnePlus Image'>
+        </dd>
+    </dl>
+</div>

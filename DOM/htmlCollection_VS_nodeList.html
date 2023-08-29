@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>HTMLCollection VS NodeList</title>
+    </head>
+    <body>
+        <h1>HTMLCollection VS NodeList</h1>
+        <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ul>
+        <script>
+            /* let listElements = document.getElementsByTagName('li');
+            console.log(listElements);
+            console.log(listElements.length);
+            
+            //Below code is for adding new li tag
+
+            listElements[0].parentNode.appendChild(document.createElement('li'));
+            console.log(listElements);
+            console.log(listElements.length); */
+
+            let listElements = document.querySelectorAll('li');
+            console.log(listElements);
+            console.log(listElements.length);
+
+            listElements[0].parentNode.appendChild(document.createElement('li'));
+            listElements = document.querySelectorAll('li');
+            console.log(listElements);
+            console.log(listElements.length);
+        </script>
+    </body>
+</html>

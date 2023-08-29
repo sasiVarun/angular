@@ -1,0 +1,43 @@
+<h2>Example with two way data binding</h2>
+<hr>
+<h4>Product Details</h4>
+<div>
+    <dl>
+        <dt>Name</dt>
+        <dd>{{Name}}</dd>
+        <dt>Price</dt>
+        <dd>{{Price}}</dd>
+        <dt>ShippedTo</dt>
+        <dd>{{ShippedTo}}</dd>
+        <dt>IsInStock</dt>
+        <dd>{{IsInStock}}</dd>
+    </dl>
+</div>
+<hr>
+<h4>Register Product</h4>
+<div>
+    <dl>
+        <dt>Name</dt>    
+        <dd>
+            <input type="text" [(ngModel)]="Name"> 
+        </dd>
+        <dt>Price</dt>
+        <dd>
+            <input type="text" [(ngModel)]="Price">
+        </dd>
+        <dt>Is In Stock</dt>
+        <dd>
+            <input type="radio" name="stock" value="Available" [(ngModel)]="IsInStock">Yes
+            <input type="radio" name="stock" value="Not Available" [(ngModel)]="IsInStock">No
+        </dd>
+        <dt>Shpped Address</dt>
+        <dd>
+            <select id="id" [(ngModel)]="ShippedTo">
+                <option value="Vijayawada">Vijayawada</option>
+                <option value="Hyderabad">Hyderabad</option>
+                <option value="Vizag">Vizag</option>
+                <option value="Warangal">Warangal</option>
+            </select>
+        </dd>
+    </dl>
+</div>

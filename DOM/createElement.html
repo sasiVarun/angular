@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Create HTML element using createElement</h1>
+    <div>Removing using removeChild or remove</div>
+    <script>
+        /* Create element */
+        let newPara = document.createElement('p');
+        /* newPara.textContent = '<strong>text added from create element paragraph</strong>' */
+
+        newPara.innerHTML = "<strong>text added from create element paragraph</strong>"
+        
+        /* Find parent element */
+        let body = document.querySelector('body');
+
+        /* Attach element to parent */
+        /* body.appendChild(newPara); */
+        
+        let h1Element = document.querySelector('h1');
+        body.insertBefore(newPara,h1Element.nextElementSibling);
+
+        let divElement = document.querySelector('div');
+        /* body.removeChild(divElement); */
+        /* divElement.parentElement.removeChild(divElement); */
+        /* divElement.remove() */
+
+    </script>
+</body>
+</html>
